@@ -6,7 +6,12 @@ import node from "@astrojs/node";
 
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    server: {
+      allowedHosts: [
+        "portfoliodavid-portfolio-fna8bt-8ce909-151-245-32-213.traefik.me"
+      ]
+    }
   },
 
   output: 'server',
