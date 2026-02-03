@@ -5,19 +5,13 @@ import react from "@astrojs/react";
 import node from "@astrojs/node";
 
 export default defineConfig({
+  // 1. Define tu dominio de producción aquí
+  site: 'https://blissanalytics.net',
   vite: {
-    plugins: [tailwindcss()],
-    preview: {
-      host: true,
-      allowedHosts: 'all'
-    }
+    plugins: [tailwindcss()]
   },
 
   output: 'server',
-
-  adapter: node({
-    mode: 'standalone'
-  }),
-
+  adapter: node({ mode: 'standalone' }),
   integrations: [react()],
 });
